@@ -8,6 +8,12 @@
       <my-global-component></my-global-component>
       <my-local-component></my-local-component>
     </div>
+    <hr>
+    <div id="app2">
+      <h3>두 번째 인스턴스 영역</h3>
+      <my-global-component></my-global-component>
+      <my-local-component></my-local-component>
+    </div>
     <script src="https://unpkg.com/vue"></script>
     <script>
       // 전역 컴포넌트 등록
@@ -24,6 +30,10 @@
         components: {
           'my-local-component': cmp
         }
+      });
+      // 두 번째 인스턴스
+      new Vue({
+        el: '#app2'
       });
     </script>
   </body>
