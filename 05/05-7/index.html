@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Vue Template - Event Handling</title>
+  </head>
+  <body>
+    <div id="app">
+      <button v-on:click="clickBtn">클릭</button>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      new Vue({
+        el: '#app',
+        methods: {
+          clickBtn: function(event) {
+            console.log(event);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
