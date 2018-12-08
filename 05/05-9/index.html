@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Vue Template - watch</title>
+  </head>
+  <body>
+    <div id="app">
+      <input v-model="message">
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      new Vue({
+        el: '#app',
+        data: {
+          message: 'Hello Vue.js!'
+        },
+        watch: {
+          message: function(data) {
+            console.log("message의 값이 바뀝니다: ", data);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
